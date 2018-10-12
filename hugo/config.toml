@@ -1,0 +1,46 @@
+baseURL = "http://example.org/"
+title = "JerryHo CloudFlare service"
+publishDir = "../docs"
+theme = "docdok"
+enableRobotsTXT = true
+languageCode = "en-us"
+DefaultContentLanguage = "en"
+
+pygmentsCodeFences = true
+pygmentsStyle = "monokailight"
+
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir= false
+enableMissingTranslationPlaceholders = false
+
+
+[Languages]
+[Languages.en]
+title = "Documentation for jerryHo CloudFlare"
+weight = 1
+languageName = "English"
+
+
+[params]
+editURL = "https://github.com/jerryhoio/cloudflare/edit/develop/hugo/content/"
+showVisitedLinks = true # default is false
+themeStyle = "flex" # "original" or "flex" # default "flex"
+themeVariant = "" # choose theme variant "green", "gold" , "gray", "blue" (default)
+ordersectionsby = "weight" # ordersectionsby = "title"
+disableHomeIcon = false # default is false
+disableSearch = false # default is false
+disableNavChevron = false # set true to hide next/prev chevron, default is false
+highlightClientSide = false # set true to use highlight.pack.js instead of the default hugo chroma highlighter
+menushortcutsnewtab = false # set true to open shortcuts links to a new tab/window
+enableGitInfo = true
+
+[outputs]
+home = [ "HTML", "RSS", "JSON"]
+
+
+[[menu.shortcuts]]
+pre = "<h3>More</h3>"
+name = "<i class='fa fa-github'></i> <label>Github repo</label>"
+identifier = "ds"
+url = "https://github.com/jerryhoio/cloudflare"
+weight = 10
