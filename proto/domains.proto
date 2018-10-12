@@ -1,0 +1,41 @@
+syntax = "proto3";
+package io.jerryho.srv.cloudflare;
+option go_package = "proto";
+
+message ListDomainsRequest{
+}
+
+message ListDomainsResponse {
+    repeated Domain domains = 1;
+}
+
+message Domain {
+    string id =  1;
+    string name = 2;
+    repeated string name_servers = 3;
+    string  status =  4;
+}
+
+message GetDomainRecordsRequest{
+    string domain_name = 1;
+}
+
+message GetDomainRecordsResponse {
+    repeated DomainRecord records = 1;
+}
+
+message DomainRecord{
+    string id = 1;
+    string type = 2;
+    string name =3;
+    string content = 4;
+    int32 ttl = 5;
+    string zone_name =6;
+    string data = 7;
+    int32 priority = 8;
+}
+
+service Domains {
+    rpc List(ListDomainsRequest) returns (ListDomainsResponse);
+    rpc GetRecords(GetDomainRecordsRequest) returns (GetDomainRecordsResponse);
+}

@@ -1,0 +1,35 @@
+# Gopkg.toml example
+#
+# Refer to https://golang.github.io/dep/docs/Gopkg.toml.html
+# for detailed Gopkg.toml documentation.
+#
+required = ["github.com/gohugoio/hugo"]
+# ignored = ["github.com/user/project/pkgX", "bitbucket.org/user/project/pkgA/pkgY"]
+
+[[constraint]]
+  name = "github.com/cloudflare/cloudflare-go"
+  version = "0.8.5"
+
+[[constraint]]
+  name = "github.com/golang/protobuf"
+  version = "1.2.0"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/micro/cli"
+
+[[constraint]]
+  branch = "master"
+  name = "github.com/micro/go-log"
+
+[[constraint]]
+  name = "github.com/micro/go-micro"
+  version = "0.12.0"
+
+[[constraint]]
+  name = "github.com/micro/go-plugins"
+  version = "0.14.1"
+
+[prune]
+  go-tests = true
+  unused-packages = true
